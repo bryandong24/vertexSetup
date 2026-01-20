@@ -97,13 +97,15 @@ Add the following block to the bottom of your `~/.zshrc` (macOS/Zsh) or `~/.bash
 # Path to the service account key created in the previous step
 export CLAUDE_SA_KEY="$HOME/claude-sa-key.json"
 
+# Default Cloud Region
+export CLOUD_ML_REGION=global
+
 # Alias to intercept 'claude' and inject the service account credentials
 alias claude='GOOGLE_APPLICATION_CREDENTIALS="$CLAUDE_SA_KEY" claude'
 
 # Enable Vertex AI integration settings
 export CLAUDE_CODE_USE_VERTEX=1
 export ANTHROPIC_VERTEX_PROJECT_ID=bryan-usage-0
-export ANTHROPIC_VERTEX_LOCATION=us-central1
 
 # Optional: Disable prompt caching if needed (0 = Enabled, 1 = Disabled)
 export DISABLE_PROMPT_CACHING=0
